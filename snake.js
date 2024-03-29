@@ -1,14 +1,14 @@
-const gameboard = document.getElementById("gamecanvas");
-const ctx = gameboard.getContext("2d");
-const scoretext = document.querySelector("#score");
-const reset = document.querySelector("#resetbtn");
-const gameheight = gameboard.height;
-const gamewidth = gameboard.width;
-const boardbackground = "white";
-const snakecolor = "green";
-const snakeborder = "black";
-const foodcolor = "red";
-const unitsize = 20;
+let gameboard = document.getElementById("gamecanvas");
+let ctx = gameboard.getContext("2d");
+let scoretext = document.querySelector("#score");
+let reset = document.querySelector("#resetbtn");
+let gameheight = gameboard.height;
+let gamewidth = gameboard.width;
+let boardbackground = "white";
+let snakecolor = "green";
+let snakeborder = "black";
+let foodcolor = "red";
+let unitsize = 20;
 let running = false;
 let xVelocity = unitsize;
 let yVelocity = 0;
@@ -36,7 +36,7 @@ function gamestart() {
 }
 function nexttick() {
   if (running) {
-    const timeout = 40 - score *2;
+    let timeout = 40 - score *2;
     setTimeout(() => {
       clearborad();
       drawfood();
@@ -55,7 +55,7 @@ function clearborad() {
 }
 function createfood() {
   function randomfood(min, max) {
-    const randomnum =
+    let randomnum =
       Math.floor((Math.random() * (max - min) + min) / unitsize) * unitsize;
     return randomnum;
   }
@@ -69,7 +69,7 @@ function drawfood() {
   ctx.fillRect(foodX, foodY, unitsize, unitsize);
 }
 function movesnake() {
-  const head = { x: snake[0].x + xVelocity, y: snake[0].y + yVelocity };
+  let head = { x: snake[0].x + xVelocity, y: snake[0].y + yVelocity };
 
   snake.unshift(head);
   if (snake[0].x == foodX && snake[0].y == foodY) {
@@ -89,27 +89,27 @@ function drawsnake() {
   });
 }
 function changedirection(event) {
-  const keypressed = event.keyCode;
+  let keypressed = event.keyCode;
   console.log(keypressed);
-  const Left = 100;
-  const Up = 104;
-  const Right = 102;
-  const Down = 101;
+  let Left = 100;
+  let Up = 104;
+  let Right = 102;
+  let Down = 101;
 
-  const left = 37;
-  const up = 38;
-  const right = 39;
-  const down = 40;
+  let left = 37;
+  let up = 38;
+  let right = 39;
+  let down = 40;
 
-  const A = 65;
-  const W = 87;
-  const D = 68;
-  const S = 83;
+  let A = 65;
+  let W = 87;
+  let D = 68;
+  let S = 83;
 
-  const goingup = yVelocity == -unitsize;
-  const goingdown = yVelocity == unitsize;
-  const goingright = xVelocity == unitsize;
-  const goingleft = xVelocity == -unitsize;
+  let goingup = yVelocity == -unitsize;
+  let goingdown = yVelocity == unitsize;
+  let goingright = xVelocity == unitsize;
+  let goingleft = xVelocity == -unitsize;
 
   switch (true) {
     case keypressed == Left && !goingright:
