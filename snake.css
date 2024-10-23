@@ -1,60 +1,57 @@
-/* Reset default margin and padding */
 * {
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
 }
 
-/* Center the content */
-body,
-html {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0;
-  /* set background color */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
 }
 
-/* Container styling */
-div {
-  text-align: center;
-}
-
-/* Title styling */
 h1 {
-  margin-bottom: 20px;
-  font-family: Arial, sans-serif;
+    font-size: 2.5em;
+    color: #2980b9;
+    margin-bottom: 20px;
 }
 
-/* Canvas styling */
 canvas {
-  border: 2px solid #333;
-  /* border color for canvas */
-  background-color: #fff;
-  /* background color for canvas */
+    border: 5px solid #2c3e50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Score label styling */
 #score {
-  font-size: 18px;
-  font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    color: #27ae60;
+    margin: 20px 0;
 }
 
-/* Reset button styling */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
 #resetbtn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  /* green background */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
+    background-color: #e74c3c;
 }
 
 #resetbtn:hover {
-  background-color: #45a049;
-  /* dark green on hover */
+    background-color: #c0392b;
 }
