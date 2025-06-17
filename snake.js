@@ -36,7 +36,7 @@ function gamestart() {
 }
 function nexttick() {
   if (running) {
-    let timeout = 40 - score *2;
+    let timeout = 70 - score *2;
     setTimeout(() => {
       clearborad();
       drawfood();
