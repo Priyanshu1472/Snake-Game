@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./snake.css">
-  <title>Snake Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="./snake.css">
 </head>
 <body>
-  <div>
-    <h1>Snake Game</h1>  
-    <div>
-      <canvas id="gamecanvas" width="600" height="600"></canvas>
+    <div class="game-container">
+        <h1>🐍 SNAKE GAME</h1>
+        <div class="canvas-container">
+            <canvas id="gamecanvas" width="400" height="400"></canvas>
+        </div>
+        <div class="score-container">
+            <div class="score-label">SCORE</div>
+            <div id="score">0</div>
+        </div>
+        <button id="resetbtn">🔄 RESET GAME</button>
+        <div class="controls-info">
+            <strong>Controls:</strong> Arrow Keys, WASD, or Numpad
+        </div>
+        <div class="mobile-controls">
+            <strong>Mobile:</strong> Swipe to control the snake
+        </div>
     </div>
-    <h1><label for="score" id="score"></label></h1>
-    <button onclick="resetgame()" id="resetbtn">Reset</button>
-  </div>
     <script src="./snake.js"></script>
 </body>
 </html>
